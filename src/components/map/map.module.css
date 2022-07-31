@@ -1,0 +1,36 @@
+div.map {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+div.map > *:last-child {
+    height: 100%;
+    min-height: 100%;
+}
+
+div.loadingSpin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+div.loadingError {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 5px;
+    text-align: center;
+}

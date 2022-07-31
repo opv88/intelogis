@@ -1,0 +1,120 @@
+div.requestsBody {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+div.requestsBody > h2 {
+    background: #24499a;
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+    width: 100%;
+}
+
+div.requestsTable {
+    overflow-x: visible;
+    min-width: 500px;
+}
+
+
+div.row {
+    padding: 15px;
+    cursor: pointer;
+}
+
+div.activeRow {
+    background: #65b32e;
+    color: white;
+}
+
+div.points {
+    display: flex;
+    flex-direction: column;
+}
+
+div.points > div {
+    display: flex;
+    flex-direction: row;
+}
+
+div.points > div:first-child {
+    margin-left: 15px;
+}
+
+
+div.points > div > *:last-child {
+    margin: 10px 0;
+}
+
+div.dropdownList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.dropdownList > *:last-child {
+    margin-left: 5px;
+}
+
+div.pointCoords {
+    cursor: pointer;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.requestsIcon {
+    color: white;
+    fill: white;
+    width: 50px;
+    margin-right: 10px;
+}
+
+button.buttonEdit {
+    background-color: #24499a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+button.buttonEdit > svg {
+    height: 25px;
+    fill: white;
+    margin-right: 15px;
+}
+
+div.saveButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.saveButtons > button {
+    background-color: #24499a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    width: 100%;
+    margin: 0 15px 0 0;
+}
+
+div.saveButtons > button > svg {
+    height: 25px;
+    fill: white;
+    margin-right: 15px;
+}
+
+div.deliveryPoints > ul {
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.ant-table-tbody > tr > td {
+    padding: 0 !important;
+}
