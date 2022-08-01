@@ -28,11 +28,8 @@ export const Map: React.FC = () => {
       if (request !== null) {
         dispatch(fetchPositionsRequest());
       }
+
     }, [request]);
-  
-    useEffect(() => {
-      setTimeout(() => window.dispatchEvent(new Event('resize')), 500);
-    });
 
     const renderPositions = (item: IPoint, index: number) => {
       if (positions.length < 1)
@@ -51,6 +48,8 @@ export const Map: React.FC = () => {
       if (pointsCenter !== undefined) {
         map.flyTo(pointsCenter as LatLngExpression, map.getZoom());
       }
+
+      setTimeout(() => map.invalidateSize(), 100);
 
       return null;
     }
