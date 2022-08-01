@@ -29,12 +29,10 @@ export const Map: React.FC = () => {
         dispatch(fetchPositionsRequest());
       }
     }, [request]);
-
+  
     useEffect(() => {
-      if (request !== null) {
-        dispatch(fetchPositionsRequest());
-      }
-    }, [request]);
+      setTimeout(() => window.dispatchEvent(new Event('resize')), 500);
+    });
 
     const renderPositions = (item: IPoint, index: number) => {
       if (positions.length < 1)
@@ -50,7 +48,6 @@ export const Map: React.FC = () => {
 
     function FlyToCenterMarker() {
       const map = useMap();
-      
       if (pointsCenter !== undefined) {
         map.flyTo(pointsCenter as LatLngExpression, map.getZoom());
       }
