@@ -103,7 +103,9 @@ const Requests: React.FC = () => {
 
     const getMenu = (point: IPoint, directionCode: 'in'|'out') => {
         return (<Menu
-            items={coords.map((item: ICoord) : any =>  {
+            items={coords.filter(coords =>
+                (directionCode === 'in' && coords.Id !== point.toCoords.Id)
+                || (directionCode === 'out' && coords.Id !== point.fromCoords.Id)).map((item: ICoord) : any =>  {
                 return {
                     key: item.Id,
                     label: (<div>{`${item.Name} (${item.Lat}, ${item.Lng})`}</div>)
